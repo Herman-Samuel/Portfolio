@@ -1,0 +1,1009 @@
+/*
+   Main style sheet, for styles needed on every page
+   First styles for mobile, then mobile in landscape, then desktop
+   Author: Samuel Herman
+   Date: 1 June 2025
+*/
+
+/* Site background colors ************************************************************************/
+:root {
+    --baseFont: white;
+    --htmlBackground: rgb(83, 83, 83);
+    --headerBackground: rgb(43, 43, 43);
+    --linkNormal: rgb(250, 49, 49);
+    --linkHover: rgb(160, 0, 0);
+    --linkActive: rgb(99, 0, 0);
+    --pageHeading: var(--linkNormal);
+
+    --lightModeFont: black;
+    --lightModeBackground: white;
+    --lightModeHeader: rgb(177, 177, 177);
+
+    --bodyLinkHover: var(--lightModeHeader);
+}
+
+/* LIGHT MODE STYLES *****************************************************************************/
+html.light-mode {
+    --htmlBackground: var(--lightModeBackground);
+    --baseFont: var(--lightModeFont);   
+}
+
+html.light-mode header {
+    background: linear-gradient(to bottom, var(--lightModeBackground), var(--lightModeHeader));
+}
+
+html.light-mode footer {
+    background: linear-gradient(to bottom, var(--lightModeHeader), var(--lightModeBackground));
+}
+
+/* HTML/BODY *************************************************************************************/
+html {
+    background-color: var(--htmlBackground);
+    font-size: 62.5%;
+    color: var(--baseFont);
+}
+
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-size: 2rem;
+}
+
+body:after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: url(../img/burger-open.png) url(../img/burger-close.png) url(../img/icon.png);
+}
+
+a {
+    color: var(--baseFont);
+}
+
+a:hover, a:focus, a:active {
+    color: var(--bodyLinkHover);
+}
+
+/* LOGO ANIMATION STYLES *************************************************************************/
+
+.logo-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--htmlBackground);
+    z-index: 1200;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container {
+    position: relative;
+    width: min(80vw, 80vh);
+    height: min(80vw, 80vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-letter-container {
+    width: 100%;
+    height: 38.58%;
+    display: flex;
+}
+
+.logo-s {
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    position: relative;
+}
+
+.logo-h {
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    position: relative;
+}
+
+.logo-piece {
+    background-color: var(--pageHeading);
+    box-shadow: 2px 2px white;
+    border-radius: 8px;
+    position: absolute;
+    display: none;
+}
+
+/* S Pieces size/position */
+.piece-01 {
+    width: 54.68%;
+    height: 18.45%;
+    left: 23%;
+}
+
+.piece-02 {
+    width: 14.98%;
+    height: 58.25%;
+    top: 0;
+    left: 0;
+}
+
+.piece-03 {
+    width: 47.94%;
+    height: 18.45%;
+    left: 23%;
+    top: 40%;
+}
+
+.piece-04 {
+    width: 15.73%;
+    height: 60.19%;
+    right: 5%;
+    bottom: 0;
+}
+
+.piece-05 {
+    width: 71.16%;
+    height: 18.45%;
+    bottom: 0;
+    left: 0;
+}
+
+/* H pieces size/position */
+.piece-06 {
+    width: 15.73%;
+    height: 100%;
+    left: 5%;
+    top: 0;
+}
+
+.piece-07 {
+    width: 46.44%;
+    height: 18.45%;
+    right: 24%;
+    top: 40.5%
+}
+
+.piece-08 {
+    width: 15.73%;
+    height: 100%;
+    right: 0;
+    top: 0;
+}
+
+/* Animations for piece 1 */
+@keyframes piece01 {
+    0% {
+        transform: translateX(calc(-100vw - 100%));
+    }
+    6% {
+        transform: translate(0px);
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.piece-01 {
+    animation: piece01 1.5s ease forwards;
+}
+
+/* Animations for piece 2 */
+@keyframes piece02 {
+    0% {
+        transform: translateY(calc(-100vh - 100%));
+    }
+    6% {
+        transform: translateY(calc(-100vh - 100%));
+    }
+    12% {
+        transform: translate(0px);
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.piece-02 {
+    animation: piece02 1.5s ease forwards;
+}
+
+/* Animations for piece 3 */
+@keyframes piece03 {
+    0% {
+        transform: translateX(calc(100vw - 100%));
+    }
+    12% {
+        transform: translateX(calc(100vw - 100%));
+    }
+    18% {
+        transform: translate(0px);
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.piece-03 {
+    animation: piece03 1.5s ease forwards;
+}
+
+/* Animations for piece 4 */
+@keyframes piece04 {
+    0% {
+        transform: translateY(calc(100vh - 100%));
+    }
+    18% {
+        transform: translateY(calc(100vh - 100%));
+    }
+    24% {
+        transform: translate(0px);
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.piece-04 {
+    animation: piece04 1.5s ease forwards;
+}
+
+/* Animations for piece 5 */
+@keyframes piece05 {
+    0% {
+        transform: translateX(calc(-100vw - 100%));
+    }
+    24% {
+        transform: translateX(calc(-100vw - 100%));
+    }
+    30% {
+        transform: translate(0px);
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.piece-05 {
+    animation: piece05 1.5s ease forwards;
+}
+
+/* Animations for piece 6 */
+@keyframes piece06 {
+    0% {
+        transform: translateY(calc(-100vh - 100%));
+    }
+    30% {
+        transform: translateY(calc(-100vh - 100%));
+    }
+    36% {
+        transform: translate(0px);
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.piece-06 {
+    animation: piece06 1.5s ease forwards;
+}
+
+/* Animations for piece 7 */
+@keyframes piece07 {
+    0% {
+        transform: translateX(calc(100vw - 100%));
+    }
+    36% {
+        transform: translateX(calc(100vw - 100%));
+    }
+    42% {
+        transform: translate(0px);
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.piece-07 {
+    animation: piece07 1.5s ease forwards;
+}
+
+/* Animations for piece 8 */
+@keyframes piece08 {
+    0% {
+        transform: translateY(calc(100vh - 100%));
+    }
+    42% {
+        transform: translateY(calc(100vh - 100%));
+    }
+    48% {
+        transform: translate(0px);
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.piece-08 {
+    animation: piece08 1.5s ease forwards;
+}
+
+/* Animations for the letter S */
+@keyframes logoS {
+    0% {
+        transform: translateX(0px) rotate(0deg);
+    }
+    70% {
+        transform: translateX(0px) rotate(0deg);
+    }
+    100% {
+        transform: translateX(calc(-100vw - 100%)) rotate(-360deg);
+    }
+}
+
+.logo-s {
+    animation: logoS 1.5s ease forwards;
+}
+
+/* Animations for the letter H */
+@keyframes logoH {
+    0% {
+        transform: translateX(0px) rotate(0deg);
+    }
+    70% {
+        transform: translateX(0px) rotate(0deg);
+    }
+    100% {
+        transform: translateX(calc(100vw - 100%)) rotate(360deg);
+    }
+}
+
+.logo-h {
+    animation: logoH 1.5s ease forwards;
+}
+
+/* Animations for the background */
+@keyframes logoWrapper {
+    0% {
+        opacity: 1;
+        display: flex;
+    }
+    75% {
+        opacity: 1;
+        display: flex;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+.logo-wrapper {
+    animation: logoWrapper 1.5s ease forwards;
+}
+
+/*HEADER AREA STYLES *****************************************************************************/
+.header-area {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+    background: linear-gradient(to bottom, var(--htmlBackground), var(--headerBackground));
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 900;
+    box-shadow: 0 2px 10px black;
+    transition: all .5s ease-in-out;
+}
+
+header.open {
+    height: 380px;
+}
+
+.header-logo {
+    display: block;
+    width: 80px;
+    height: 80px;
+    background-image: url(../img/icon.png);
+    background-size: 105%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 10px;
+}
+
+.header-logo-link {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0;
+}
+
+/*DARK/LIGHT TOGGLE BUTTON ***********************************************************************/
+#theme-container {
+    height: 80px;
+    width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.light-dark-toggle {
+    cursor: pointer;
+    position: relative;
+    width: 60px;
+    height: 30px;
+    border-radius: 15px;
+    background: var(--toggle-bg, #333);
+    margin: 0 auto;
+}
+
+.light-dark-toggle::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--toggle-knob, #fff);
+    transition: transform .5s ease-in-out;
+}
+
+/* Button switched to dark mode */
+html:not(.light-mode) .light-dark-toggle {
+    --toggle-bg: #0a0a0a;
+    --toggle-knob: #fff;
+}
+
+html:not(.light-mode) .light-dark-toggle::after {
+    transform: translateX(0);
+}
+
+/* Button switches to light mode */
+html.light-mode .light-dark-toggle {
+    --toggle-bg: #a0a0a0;
+    --toggle-knob: #111111;
+}
+
+html.light-mode .light-dark-toggle::after {
+    transform: translateX(30px);
+}
+
+/* BURGER MENU STYLES ****************************************************************************/
+.toggle-container {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-right: 5px;
+}
+
+.header-toggle-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center, left 81px top;
+    display: block;
+    cursor: pointer;
+}
+
+.burger-open {
+    background-image: url(../img/burger-open.png);
+    opacity: 1;
+    transition: all .5s ease-in-out;
+}
+
+.burger-open.open {
+    opacity: 0;
+}
+
+.burger-close {
+    background-image: url(../img/burger-close.png);
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+.burger-close.open {
+    opacity: 1;
+}
+
+#burger-menu {
+    width: 100%;
+    height: 0px;
+    position: fixed;
+    z-index: 900;
+    top: 80px;
+    overflow: hidden;
+    visibility: hidden;
+    transition: all .5s ease-in-out;
+}
+
+#burger-menu.open {
+    visibility: visible;
+    height: 300px;
+}
+
+.menu-ul {
+    height: 100%;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+.menu-ul.open {
+    transition: all .5s ease-in-out;
+    opacity: 1;
+}
+
+#burger-menu ul li {
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+    font-weight: bold;
+    border-top: 2px solid black;
+}
+
+#burger-menu ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 3rem;
+    color: var(--linkNormal);
+    text-shadow: -3px 3px 3px black;
+    transition: all .5s ease-in-out;
+}
+
+#burger-menu ul li a:hover, #burger-menu ul li a:focus {
+    color: var(--linkHover);
+    font-size: 5rem;
+    text-shadow: -6px 6px 6px black;
+}
+
+#burger-menu ul li a:active {
+    color: var(--linkActive);
+    font-size: 6rem;
+    text-shadow: -9px 9px 9px black;
+}
+
+/* MAIN SECTION STYLES ***************************************************************************/
+main {
+    flex-grow: 1;
+    margin-top: 90px;
+    text-align: center;
+}
+
+main * {
+    margin: 7px 15px;
+}
+
+.desktop-row {
+    margin: 0;
+}
+
+.desktop-column {
+    margin: 0;
+}
+
+h1 {
+    font-size: 5rem;
+    line-height: 71px;
+    text-shadow: -3px 3px 3px black;
+    color: var(--pageHeading);
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+.long-paragraph {
+    text-align: left;
+}
+
+/*HOME PAGE STYLES *******************************************************************************/
+.pic-container {
+    width: 70vw;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: -3px 3px 12px black, 3px -3px 12px black;
+    cursor: pointer;
+    
+}
+
+.pic {
+    width: 100%;
+    object-fit: cover;
+    margin: 0;
+}
+
+.pic-overlay-container {
+    position: fixed;    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 0;
+    z-index: 1100;
+    transition: all .5s ease-in-out;
+    background-color: var(--htmlBackground);
+    visibility: hidden;
+    opacity: 0;
+    box-sizing: border-box;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Shows the expanded image when activated */
+.pic-overlay-container.show {
+    height: 90vw;
+    aspect-ratio: 1/1;
+    visibility: visible;
+    opacity: 1;
+}
+
+.pic-overlay {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid black;
+    box-shadow: -3px 3px 30px black, 3px -3px 30px black;
+    margin: 0;
+}
+
+.socials-img {
+    width: 30vw;
+    transition: all 0.3s ease;
+}
+
+.socials-img:hover {
+    opacity: 0.8;
+    filter: brightness(90%);
+}
+
+/*SCROLL GALLERY STYLES **************************************************************************/
+.gallery-container {
+    position: relative;
+    width: 90vw;
+    border: 1px solid #000000;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.gallery-img-wrapper {
+    display: flex;
+    margin: 0;
+}
+
+.gallery-img {
+    width: 100%;
+    height: auto;
+    display: none;
+    object-fit: contain;
+    margin: 0;
+}
+
+.gallery-img.active {
+    display: block;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.5em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin: 0;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/*RESUME PAGE STYLES *****************************************************************************/
+#resume {
+    width: 98vw;
+    margin: 0 auto;
+    object-fit: contain;
+    border: 1px solid #000000;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.pdf-list li {
+    margin: 7px 0;
+}
+/* FOOTER STYLES *********************************************************************************/
+footer {
+    background: linear-gradient(to bottom, var(--headerBackground), var(--htmlBackground));
+    text-align: center;
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+    font-size: 1.2rem;
+}
+
+/**************************************************************************************
+    Mobile Landscape mode
+***************************************************************************************/
+@media only screen and (max-width: 767px) and (orientation: landscape){
+    /* HEADER AREA STYLES ************************************************************************/
+    .header-area {
+        height: 40px;
+    }
+
+    header {
+        height: 40px;
+    }
+    
+    header.open {
+        height: 190px;
+    }
+
+    .header-logo {
+        width: 40px;
+        height: 40px;
+    }
+    
+    #theme-container {
+        height: 40px;
+    }
+
+    /* BURGER MENU STYLES ************************************************************************/
+    .toggle-container {
+        width: 40px;
+        height: 40px;
+    }
+
+    #burger-menu {
+        top: 40px;
+    }
+
+    #burger-menu ul li {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    #burger-menu.open {
+        visibility: visible;
+        height: 150px;
+    }
+
+    /* MAIN SECTION STYLES ***********************************************************************/
+    main {
+        margin-top: 45px;
+    }
+
+    h1 {
+        font-size: 4rem;
+        line-height: 50px;
+    }
+
+    /* HOME PAGE STYLES **************************************************************************/
+    .pic-container {
+        width: 70vh;        
+    }
+
+    .pic-overlay-container {
+        top: 60%;
+    }
+
+    .pic-overlay-container.show {
+        width: 80vh;
+        height: 80vh;
+    }
+
+    .gallery-container {
+        width: 80vh;
+    }
+
+    .prev-btn {
+        left: 5px;
+    }
+
+    .next-btn {
+        right: 5px;
+    }
+
+    /* RESUME PAGE STYLES ************************************************************************/
+    #resume {
+        width: 90vh;
+    }
+}
+
+/**************************************************************************************
+    Desktop Styles
+***************************************************************************************/
+@media only screen and (min-width: 1024px) {
+    
+    /* HEADER AREA STYLES ************************************************************************/
+    header {
+        height: 140px;
+        transition: none;
+    }
+    
+    /* Dark/light toggle btn */
+    #theme-container {
+        width: 200px;
+    }
+
+    /* BURGER MENU STYLES ************************************************************************/
+    .toggle-container {
+        visibility: hidden;
+        transition: none;
+    }
+
+    .header-toggle-btn {
+        transition: none;
+    }
+
+    #burger-menu {
+        height: 60px;
+        visibility: visible;
+        transition: none;
+    }
+
+    .menu-ul {
+        opacity: 1;
+        transition: none;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #burger-menu ul li {
+        height: 60px;
+        width: 25%;
+        line-height: 60px;
+        border-top: none;
+        display: block;
+    }
+    
+    #burger-menu ul li a {
+        font-size: 3rem;
+    }
+
+    #burger-menu ul li a:hover, #burger-menu ul li a:focus {
+        font-size: 5rem;
+    }
+
+    #burger-menu ul li a:active {
+        font-size: 5.5rem;
+    }
+
+    /* MAIN SECTION STYLES ***********************************************************************/
+    body {
+        font-size: 3rem;
+    }
+
+    main {
+        width: 100%;
+        margin-top: 140px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main * {
+        margin: 20px 20px;
+    }
+
+    .desktop-row {
+        width: 100%;
+        margin: 0;
+    }
+
+    .desktop-column {
+        width: 48vw;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 7rem;
+        line-height: 85px;
+    }
+    
+    h2 {
+        font-size: 5rem;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }
+    
+    .long-paragraph {
+        text-align: left;
+    }
+
+    /* HOME PAGE STYLES **************************************************************************/
+    .pic-container {
+        width: 70%;
+        max-width: 70vh;
+    }
+
+    .pic-overlay-container.show {
+        height: 95vh;
+        max-height: 80%;
+    }
+
+    .socials-img {
+        width: 50%;
+    }
+
+    /* SCROLL GALLERY STYLES *********************************************************************/
+    .gallery-container {
+        width: 100%;
+        max-width: 70vh;
+    }
+
+    /* RESUME PAGE STYLES ************************************************************************/
+    #resume {
+        width: 100%;
+        max-width: 60vh;
+        margin: 0 auto;
+    }
+
+    /* FOOTER STYLES *****************************************************************************/
+    footer {
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+}
