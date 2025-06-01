@@ -1,0 +1,94 @@
+<!--
+    Main page of Samuel Herman's portfolio website
+    Author: Samuel Herman
+    Date: 1 June 2025
+-->
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel R. Herman Portfolio</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!--Structure of the logo animation that plays on initial page load-->
+    <div class="logo-wrapper">
+        <div class="logo-container">
+            <div class="logo-letter-container">
+                <div class="logo-s">
+                    <div class="logo-piece piece-01"></div>
+                    <div class="logo-piece piece-02"></div>
+                    <div class="logo-piece piece-03"></div>
+                    <div class="logo-piece piece-04"></div>
+                    <div class="logo-piece piece-05"></div>
+                </div>
+                <div class="logo-h">
+                    <div class="logo-piece piece-06"></div>
+                    <div class="logo-piece piece-07"></div>
+                    <div class="logo-piece piece-08"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <!--Area at very top of page for logo and menu toggle button-->
+        <div class="header-area">
+            <div class="header-logo"><a class="header-logo-link link" href="index.html"></a></div>
+            <div id="theme-container">
+                <p>Dark</p>
+                <div class="light-dark-toggle"></div>
+                <p>Light</p>
+            </div>
+            <div class="toggle-container">
+                <div class="header-toggle-btn burger-open"></div>
+                <div class="header-toggle-btn burger-close"></div>
+            </div>
+        </div>
+        <nav id="burger-menu">
+            <ul class="menu-ul">
+                <li><a href="index.html" class="link">HOME</a></li>
+                <li><a href="pages/about-me.html" class="link">ABOUT ME</a></li>
+                <li><a href="pages/projects.html" class="link">PROJECTS</a></li>
+                <li><a href="pages/resume.html" class="link">RESUME</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="desktop-row"><h1>Samuel Ridge Herman</h1></div>
+        <div class="desktop-column">
+            <!--Home page picture expands when clicked-->
+            <div class="pic-container">
+                <img src="img/main-pic.jpg" alt="Main Pic" class="pic">
+            </div>
+            <div class="pic-overlay-container">
+                <img class="pic-overlay" src="img/main-pic.jpg" alt="Overlay Pic">
+            </div>
+        </div>
+        <div class="desktop-column">
+            <div class="contact">
+                <h2>Contact Me:</h2>
+                <p><a href="tel:+18505902967">Call or Text: (850)590-2967</a></p>
+                <p><a href="mailto:leadfromthefront99@gmail.com">leadfromthefront99@gmail.com</a></p>
+                <p><a href="https://www.linkedin.com/in/herman-samuel" target="_blank"><img src="img/linkedin.png" alt="LinkedIn" class="socials-img"></a></p>
+            </div>
+            <h2><a href="pages/resume.html" class="link">Resume</a></h2>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <p><a href="tel:+18505902967">Call or Text: (850)590-2967</a></p>
+            <p><a href="mailto:leadfromthefront99@gmail.com">leadfromthefront99@gmail.com</a></p>
+        </div>
+        <p>Site Designed & Developed by:<br>Samuel Herman</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/picOverlay.js"></script>
+    <script src="js/logo.js"></script>
+</body>
+</html>
