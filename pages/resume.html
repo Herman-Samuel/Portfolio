@@ -1,0 +1,109 @@
+<!--
+    Page displaying resume, diploma, certs, and recommendation letter
+    Provides PDF links to all of them
+    Author: Samuel Herman
+    Date: 1 June 2025
+-->
+
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel R. Herman Portfolio</title>
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <!--Structure of the logo animation that plays on initial page load-->
+    <div class="logo-wrapper">
+        <div class="logo-container">
+            <div class="logo-letter-container">
+                <div class="logo-s">
+                    <div class="logo-piece piece-01"></div>
+                    <div class="logo-piece piece-02"></div>
+                    <div class="logo-piece piece-03"></div>
+                    <div class="logo-piece piece-04"></div>
+                    <div class="logo-piece piece-05"></div>
+                </div>
+                <div class="logo-h">
+                    <div class="logo-piece piece-06"></div>
+                    <div class="logo-piece piece-07"></div>
+                    <div class="logo-piece piece-08"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <!--Area at very top of page for logo and menu toggle button-->
+        <div class="header-background">
+        <div class="header-area">
+            <div class="header-logo"><a class="header-logo-link link" href="../index.html"></a></div>
+             <div id="theme-container">
+                <p>Dark</p>
+                <div class="light-dark-toggle"></div>
+                <p>Light</p>
+            </div>
+            <div class="toggle-container">
+                <div class="header-toggle-btn burger-open"></div>
+                <div class="header-toggle-btn burger-close"></div>
+            </div>
+        </div>
+        <nav id="burger-menu">
+            <ul class="menu-ul">
+                <li><a href="../index.html" class="link">HOME</a></li>
+                <li><a href="about-me.html" class="link">ABOUT ME</a></li>
+                <li><a href="projects.html" class="link">PROJECTS</a></li>
+                <li><a href="resume.html" class="link">RESUME</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="desktop-row"><h1>Resume:</h1></div>
+        <div class="desktop-column">
+        <img id="resume" src="../img/resume.jpg" alt="Resume Picture">
+        <h3><a href="../docs/Herman_Samuel_Resume.pdf" target="_blank">View/download my resume</a></h3>
+        </div>
+        <div class="desktop-column">
+        <!--Scroll gallery, showing diploma, certs, and recommendation letter-->
+        <div class="gallery-container">
+            <div class="gallery-img-wrapper">
+                <img src="../img/Diploma_A.S._Computer_Information_Technology.jpg" loading="lazy" alt="Diploma for A.S. in Computer Information Technology" class="gallery-img active">
+                <img src="../img/Technical_Certificate_Web_Development_Specialist.jpg" loading="lazy" alt="Technical Certificate for Web Development Specialist" class="gallery-img ">
+                <img src="../img/Technical_Certificate_Computer_Programming_Specialist.jpg" loading="lazy" alt="Technical Certificate for Computer Programming Specialist" class="gallery-img ">
+                <img src="../img/Technical_Certificate_Information_Technology_Analysis.jpg" loading="lazy" alt="Technical Certificate for IT Analysis" class="gallery-img ">
+                <img src="../img/Technical_Certificate_Information_Technology_Support_Specialist.jpg" loading="lazy" alt="Technical Certificate for IT Support Specialist" class="gallery-img ">
+                <img src="../img/Recommendation_Letter_Wesley.jpg" loading="lazy" alt="Recommendation Letter from Wesley Fontana" class="gallery-img ">
+            </div>
+            <button class="prev-btn">&lt</button>
+            <button class="next-btn">&gt</button>
+        </div>
+        <h3>For PDF, click an option below:</h3>
+        <ul class="pdf-list">
+            <li><a href="../docs/Herman_Samuel_Resume.pdf" target="_blank">Resume</a></li>
+            <li><a href="../docs/Diploma_A.S._Computer_Information_Technology.pdf" target="_blank">Diploma</a></li>
+            <li><a href="../docs/Technical_Certificate_Web_Development_Specialist.pdf" target="_blank">Technical Cert- Web Development</a></li>
+            <li><a href="../docs/Technical_Certificate_Computer_Programming_Specialist.pdf" target="_blank">Technical Cert- Computer Programming</a></li>
+            <li><a href="../docs/Technical_Certificate_Information_Technology_Analysis.pdf" target="_blank">Technical Cert- IT Analysis</a></li>
+            <li><a href="../docs/Technical_Certificate_Information_Technology_Support_Specialist.pdf" target="_blank">Technical Cert- IT Support</a></li>
+            <li><a href="../docs/Recommendation_Letter_Wesley.pdf" target="_blank">Recommendation Letter</a></li>
+        </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <p><a href="tel:+18505902967">Call or Text: (850)590-2967</a></p>
+            <p><a href="mailto:leadfromthefront99@gmail.com">leadfromthefront99@gmail.com</a></p>
+        </div>
+        <p>Site Designed & Developed by:<br>Samuel Herman</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/gallery.js"></script>
+    <script src="../js/logo.js"></script>
+</body>
+</html>
