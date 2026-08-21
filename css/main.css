@@ -644,6 +644,8 @@ h3 {
     text-align: left;
 }
 
+
+
 /*HOME PAGE STYLES *******************************************************************************/
 .pic-container {
     width: 70vw;
@@ -703,6 +705,81 @@ h3 {
 .socials-img:hover {
     opacity: 0.8;
     filter: brightness(90%);
+}
+
+#resumelink {
+    margin-top: 30px;
+}
+/*CONTACT STYLES**********************************************************************************/
+#contactme * {
+    margin: 7px 0;
+}
+
+form { 
+    max-width: 420px;
+    margin: auto auto !important;
+}
+
+.feedback-input {
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid #7c7c7c;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.feedback-input:focus { border: 2px solid #ffffff;}
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+[type="submit"] {
+  width: 100%;
+  background: var(--headerBackground);
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+}
+[type="submit"]:hover { background: #363636;}
+
+#responseMessage {
+  border-radius: 5px;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  /* max-width: 200px; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#responseMessage.success {
+  color: #008000; /* Green background for success */
+}
+
+#responseMessage.error {
+  color: #FF0000; /* Red background for errors */
+}
+
+#responseMessage.show {
+  opacity: 1;
 }
 
 /*SCROLL GALLERY STYLES **************************************************************************/
