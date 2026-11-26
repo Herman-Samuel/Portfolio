@@ -38,6 +38,7 @@ I built this site to present my IT and cybersecurity background in one place: my
 
 ## Project structure
 
+```
 Portfolio/
 ├── css/          # Stylesheets
 ├── docs/         # Resume, degree, and certificate PDFs
@@ -45,6 +46,7 @@ Portfolio/
 ├── js/           # Scripts: contact form, image gallery, logo animation, main js file, picture overlay
 ├── pages/        # About Me, Projects, Resume, and Internship pages
 ├── index.html    # Home page
+```
 
 ## Skills practiced
 
