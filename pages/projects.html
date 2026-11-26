@@ -1,0 +1,111 @@
+<!--
+    Page showing Samuel Herman's projects
+    Author: Samuel Herman
+    Date: 1 June 2025
+-->
+
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel R. Herman Portfolio</title>
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <!--Structure of the logo animation that plays on initial page load-->
+    <div class="logo-wrapper">
+        <div class="logo-container">
+            <div class="logo-letter-container">
+                <div class="logo-s">
+                    <div class="logo-piece piece-01"></div>
+                    <div class="logo-piece piece-02"></div>
+                    <div class="logo-piece piece-03"></div>
+                    <div class="logo-piece piece-04"></div>
+                    <div class="logo-piece piece-05"></div>
+                </div>
+                <div class="logo-h">
+                    <div class="logo-piece piece-06"></div>
+                    <div class="logo-piece piece-07"></div>
+                    <div class="logo-piece piece-08"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <!--Area at very top of page for logo and menu toggle button-->
+        <div class="header-background">
+        <div class="header-area">
+            <div class="header-logo"><a class="header-logo-link link" href="../index.html"></a></div>
+             <div id="theme-container">
+                <p>Dark</p>
+                <div class="light-dark-toggle"></div>
+                <p>Light</p>
+            </div>
+            <div class="toggle-container">
+                <div class="header-toggle-btn burger-open"></div>
+                <div class="header-toggle-btn burger-close"></div>
+            </div>
+        </div>
+        <nav id="burger-menu">
+            <ul class="menu-ul">
+                <li><a href="../index.html" class="link">HOME</a></li>
+                <li><a href="about-me.html" class="link">ABOUT ME</a></li>
+                <li><a href="projects.html" class="link">PROJECTS</a></li>
+                <li><a href="resume.html" class="link">RESUME</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="desktop-row"><h1>Projects:</h1></div>
+        <div class="desktop-column">
+        <!--Takes you to the GitHub for my Home Lab Infrastructure project-->
+        <section>
+            <h2>Home Lab Infrastructure</h2>
+            <p>
+                A segmented, enterprise-style home network built around an OPNsense firewall, managed switch, and UniFi access point, 
+                with six VLANs separated by default-deny firewall rules. I documented the migration with a gap analysis, rollback 
+                plan, and change request, and verified the rules with recorded ping audits. The lab is also a safe, isolated place to 
+                learn by building, breaking, and fixing things. Click below to see the documentation!
+            </p>
+            <a href="https://github.com/Herman-Samuel/homelab-infrastructure" target="_blank">Network Infrastructure GitHub<br><br></a>
+        </section>
+        </div>
+        <div class="desktop-column">
+        <!--Takes you to my internship page-->
+        <section>
+            <h2>College Internship</h2>
+            <p>
+                As a networking intern at Florida State College at Jacksonville, I built and configured a private classroom network 
+                that future students will use for hands-on learning. Click below to see what the project involved!
+            </p>
+            <a href="internship.html" class="link">Internship Page<br><br></a>
+        </section>
+        <!--Links to GitHub, where you can see all of this lovely code-->
+        <section>
+            <h2>Portfolio</h2>
+            <p>
+                I designed and built this site myself in HTML, CSS, and JavaScript. It's responsive across screen sizes and includes 
+                an animated logo, light/dark themes, image galleries, and a contact form that sends email through the Web3Forms API. 
+                Click below to see the source code!
+            </p>
+            <a href="https://github.com/Herman-Samuel/Portfolio" target="_blank">Portfolio Github<br><br></a>
+        </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <p><a href="../index.html#name">Message Me Via The<br><strong>Contact Form</strong><br></a></p>
+        </div>
+        <p>Site Designed & Developed by:<br>Samuel Herman</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/logo.js"></script>
+</body>
+</html>
